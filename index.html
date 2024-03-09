@@ -2,64 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>rakion99's Site</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        /* CSS for the menu */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change the link color to indicate the active/current menu item */
+        li a:hover {
+            background-color: #111;
+        }
+    </style>
 </head>
 <body>
-    <header class="center clearfix" id="navtop">
-        <a href="index.html" class="logo fleft"><img src="img/logo.png" alt="Logo" /></a>
-    </header>
-    <div class="main center">
-        <section class="part clearfix">
-            <header class="title clearfix">
-                <h1>Projects</h1>
-            </header>
-            <aside class="column4 mright">
-                <p class="mbottom"><strong>Explore my public projects:</strong></p>
-                <menu class="work_nav">
-                    <a id="work_all" class="arrow more buttonactive">All</a><br>
-                    <a id="minecraft" class="arrow more">Minecraft Related</a><br>
-                    <a id="roblox" class="arrow more">Roblox Related</a><br>
-                    <a id="fallout" class="arrow more">Fallout Related</a>
-                </menu>
-            </aside>
-            <section class="columnthird content clearfix">
-                <figure class="work fallout">
-                    <a href="https://rakion99.github.io/shelter-editor/">
-                        <img src="img/falloutshelter.png" alt="Fallout Shelter Web Save Editor" />
-                        <span class="zoom"></span>
-                    </a>
-                    <figcaption>
-                        <a href="https://rakion99.github.io/shelter-editor/" class="arrow">Fallout Shelter Web Save Editor</a>
-                        <p>Edit your Fallout Shelter saves online!</p>
-                    </figcaption>
-                </figure>
-                <figure class="work minecraft">
-                    <a href="usernamemod.html">
-                        <img src="img/username2.png" alt="UserName Mod" />
-                        <span class="zoom"></span>
-                    </a>
-                    <figcaption>
-                        <a href="usernamemod.html" class="arrow">UserName Mod Page</a>
-                        <p>Change your in-game username in Minecraft.</p>
-                    </figcaption>
-                </figure>
-                <figure class="work roblox">
-                    <a href="https://github.com/rakion99/Axon">
-                        <img src="img/axon.png" alt="Axon" />
-                        <span class="zoom"></span>
-                    </a>
-                    <figcaption>
-                        <a href="https://github.com/rakion99/Axon" class="arrow">Axon</a>
-                        <p>Explore the Axon project on GitHub.</p>
-                    </figcaption>
-                </figure>
-            </section>
-        </section>
-    </div>
+
+<!-- Menu -->
+<ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+
+<!-- Content -->
+<div style="padding:20px">
+    <h2>Content Here</h2>
+    <p>This is where your website content will go.</p>
+</div>
+
 </body>
 </html>
