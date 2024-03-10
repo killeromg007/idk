@@ -1,25 +1,25 @@
 body {
-    min-height: 100vh;
-    margin: 0;
-    overflow-y: auto;
-    font-family: Arial, sans-serif; /* Specify your preferred font */
+  min-height: 100vh;
+  margin: 0;
+  overflow-y: auto;
+  font-family: Arial, sans-serif;
 }
 
-/* Animate all text elements */
-* {
-  opacity: 0; /* Initially invisible */
-  animation: fadeIn ease 1s; /* Animation name, timing function, duration */
+section {
+  /* Style your content sections here */
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; } /* Start from invisible */
-  to { opacity: 1; } /* Animate to fully visible */
+/* Animation for sections coming into view */
+section {
+  opacity: 0;
+  animation: fadeInUp ease 1s; /* Animation name, timing function, duration */
+  animation-delay: calc(0.2s * index); /* Delay based on section order */
 }
 
-/* Additional styling (unchanged) */
-
-ul {
-  ... /* Existing styles */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); } /* Start invisible and slightly offscreen */
+  to { opacity: 1; transform: translateY(0); } /* Animate to fully visible and in position */
 }
-
-... /* Other styles */
