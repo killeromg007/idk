@@ -3,26 +3,21 @@
 <head>
   <title>My Website</title>
   <style>
-    /* Your existing styles here */
-
-.big-test-list {
-  text-align: center;
-  margin: 20px auto;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-#visitor-ip-list {
-  list-style: none;
-  padding: 0;
+    body {
+  min-height: 100vh;
   margin: 0;
+  overflow-y: auto;
+  font-family: Arial, sans-serif;
 }
 
-#visitor-ip-list li {
-  margin-bottom: 5px;
+section {
+  /* Style your content sections here */
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
 }
 
+/* Animation for sections coming into view */
 section {
   opacity: 0;
   animation: fadeInUp ease 1s; /* Animation name, timing function, duration */
@@ -45,11 +40,6 @@ section {
     <li><a href="#contact">Contact</a></li>
   </ul>
 
-  <div class="big-test-list">
-    <h2>Visitor IPs (Simulated)</h2>
-    <ul id="visitor-ip-list"></ul>
-  </div>
-
   <section id="home">
     <h2>Welcome!</h2>
     <p>This is the home section content.</p>
@@ -70,31 +60,5 @@ section {
     <p>This is the contact section content.</p>
   </section>
 
-  <script>
-    const visitorIpList = document.getElementById('visitor-ip-list');
-
-function generateRandomIP() {
-  // Simulate IP format (replace with your desired pattern)
-  return Math.floor(Math.random() * 256) + "." +
-         Math.floor(Math.random() * 256) + "." +
-         Math.floor(Math.random() * 256) + "." +
-         Math.floor(Math.random() * 256);
-}
-
-function addVisitorIP() {
-  const newIP = document.createElement('li');
-  newIP.textContent = generateRandomIP();
-  visitorIpList.appendChild(newIP);
-}
-
-// Add initial IPs (adjust the number)
-for (let i = 0; i < 5; i++) {
-  addVisitorIP();
-}
-
-// Simulate periodic updates (adjust interval)
-setInterval(addVisitorIP, 2000); // Update every 2 seconds
-
-  </script>
 </body>
 </html>
