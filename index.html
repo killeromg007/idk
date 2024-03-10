@@ -1,64 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>My Website</title>
-  <style>
-    body {
-  min-height: 100vh;
-  margin: 0;
-  overflow-y: auto;
-  font-family: Arial, sans-serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            overflow-y: auto;
+            font-family: Arial, sans-serif; /* Specify your preferred font */
+        }
 
-section {
-  /* Style your content sections here */
-  padding: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-}
+        /* CSS for the big text with animation */
+        .big-text {
+            text-align: center;
+            font-size: 3em; /* Adjust the font size as needed */
+            margin-top: 100px;
+            animation: fadeIn ease 2s; /* Animation name, timing function, duration */
+        }
 
-/* Animation for sections coming into view */
-section {
-  opacity: 0;
-  animation: fadeInUp ease 1s; /* Animation name, timing function, duration */
-  animation-delay: calc(0.2s * index); /* Delay based on section order */
-}
+        @keyframes fadeIn {
+            from { opacity: 0; } /* Start from invisible */
+            to { opacity: 1; } /* Animate to fully visible */
+        }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); } /* Start invisible and slightly offscreen */
-  to { opacity: 1; transform: translateY(0); } /* Animate to fully visible and in position */
-}
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
 
-  </style>
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+    </style>
 </head>
 <body>
 
-  <ul>
+<ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#contact">Contact</a></li>
-  </ul>
+</ul>
 
-  <section id="home">
-    <h2>Welcome!</h2>
-    <p>This is the home section content.</p>
-  </section>
+<div class="big-text">
+    Welcome to My Website
+</div>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>This is the about us section content.</p>
-  </section>
+<img src="path_to_your_image.jpg" alt="Description of your image">
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <p>This is the services section content.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>This is the contact section content.</p>
-  </section>
+<div style="padding:20px">
+    <h2>Content Here</h2>
+    <p>This is where your website content will go.</p>
+</div>
 
 </body>
 </html>
