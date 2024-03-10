@@ -1,74 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <style>
-        body {
-            min-height: 100vh;
-            margin: 0;
-            overflow-y: auto;
-            font-family: Arial, sans-serif; /* Specify your preferred font */
-        }
+  <title>My Website</title>
+  <style>
+    /* Your existing styles here */
 
-        /* CSS for the big text with animation */
-        .big-text {
-            text-align: center;
-            font-size: 3em; /* Adjust the font size as needed */
-            margin-top: 100px;
-            animation: fadeIn ease 2s; /* Animation name, timing function, duration */
-        }
+.big-test-list {
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
 
-        @keyframes fadeIn {
-            from { opacity: 0; } /* Start from invisible */
-            to { opacity: 1; } /* Animate to fully visible */
-        }
+#visitor-ip-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
+#visitor-ip-list li {
+  margin-bottom: 5px;
+}
 
-        li {
-            float: left;
-        }
+section {
+  opacity: 0;
+  animation: fadeInUp ease 1s; /* Animation name, timing function, duration */
+  animation-delay: calc(0.2s * index); /* Delay based on section order */
+}
 
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); } /* Start invisible and slightly offscreen */
+  to { opacity: 1; transform: translateY(0); } /* Animate to fully visible and in position */
+}
 
-        li a:hover {
-            background-color: #111;
-        }
-    </style>
+  </style>
 </head>
 <body>
 
-<ul>
+  <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#contact">Contact</a></li>
-</ul>
+  </ul>
 
-<div class="big-text">
-    Welcome to My Website
-</div>
+  <div class="big-test-list">
+    <h2>Visitor IPs (Simulated)</h2>
+    <ul id="visitor-ip-list"></ul>
+  </div>
 
-<img src="path_to_your_image.jpg" alt="Description of your image">
+  <section id="home">
+    <h2>Welcome!</h2>
+    <p>This is the home section content.</p>
+  </section>
 
-<div style="padding:20px">
-    <h2>Content Here</h2>
-    <p>This is where your website content will go.</p>
-</div>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>This is the about us section content.</p>
+  </section>
 
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>This is the services section content.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>This is the contact section content.</p>
+  </section>
+
+  <script>
+    const visitorIpList = document.getElementById('visitor-ip-list');
+
+function generateRandomIP() {
+  // Simulate IP format (replace with your desired pattern)
+  return Math.floor(Math.random() * 256) + "." +
+         Math.floor(Math.random() * 256) + "." +
+         Math.floor(Math.random() * 256) + "." +
+         Math.floor(Math.random() * 256);
+}
+
+function addVisitorIP() {
+  const newIP = document.createElement('li');
+  newIP.textContent = generateRandomIP();
+  visitorIpList.appendChild(newIP);
+}
+
+// Add initial IPs (adjust the number)
+for (let i = 0; i < 5; i++) {
+  addVisitorIP();
+}
+
+// Simulate periodic updates (adjust interval)
+setInterval(addVisitorIP, 2000); // Update every 2 seconds
+
+  </script>
 </body>
 </html>
