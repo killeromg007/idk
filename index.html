@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            overflow-y: auto;
+            font-family: Arial, sans-serif; /* Specify your preferred font */
+        }
+
+        /* CSS for the big text with animation */
+        .big-text {
+            text-align: center;
+            font-size: 3em; /* Adjust the font size as needed */
+            margin-top: 100px;
+            animation: fadeIn ease 2s; /* Animation name, timing function, duration */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; } /* Start from invisible */
+            to { opacity: 1; } /* Animate to fully visible */
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+
+<div class="big-text">
+    Welcome to My Website
+</div>
+
+<img src="path_to_your_image.jpg" alt="Description of your image">
+
+<div style="padding:20px">
+    <h2>Content Here</h2>
+    <p>This is where your website content will go.</p>
+</div>
+
+</body>
+</html>
