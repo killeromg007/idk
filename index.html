@@ -1,74 +1,183 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>BotDashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            min-height: 100vh;
             margin: 0;
-            overflow-y: auto;
-            font-family: Arial, sans-serif; /* Specify your preferred font */
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
         }
-
-        /* CSS for the big text with animation */
-        .big-text {
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #111;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+        }
+        .sidebar h2 {
             text-align: center;
-            font-size: 3em; /* Adjust the font size as needed */
-            margin-top: 100px;
-            animation: fadeIn ease 2s; /* Animation name, timing function, duration */
+            color: #fff;
+            margin-bottom: 30px;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; } /* Start from invisible */
-            to { opacity: 1; } /* Animate to fully visible */
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
+        .sidebar a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #bbb;
             display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+            color: #fff;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 10px 20px;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+        .header .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .header .nav-links a {
+            margin-left: 20px;
+            color: #bbb;
             text-decoration: none;
         }
-
-        li a:hover {
-            background-color: #111;
+        .header .nav-links a:hover {
+            color: #fff;
+        }
+        .dashboard {
+            margin-top: 20px;
+        }
+        .dashboard h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .dashboard .stats {
+            display: flex;
+            justify-content: space-between;
+        }
+        .dashboard .stats .stat {
+            background-color: #2a2a4a;
+            padding: 20px;
+            border-radius: 10px;
+            width: 23%;
+            text-align: center;
+        }
+        .dashboard .stats .stat h2 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+        .dashboard .stats .stat p {
+            color: #bbb;
+        }
+        .dashboard .graphs {
+            margin-top: 20px;
+        }
+        .dashboard .graphs h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .dashboard .graphs .search-bar {
+            margin-bottom: 20px;
+        }
+        .dashboard .graphs .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .dashboard .graphs .chart {
+            background-color: #2a2a4a;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-
-<ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
-</ul>
-
-<div class="big-text">
-    Welcome to My Website
-</div>
-
-<img src="path_to_your_image.jpg" alt="Description of your image">
-
-<div style="padding:20px">
-    <h2>Content Here</h2>
-    <p>This is where your website content will go.</p>
-</div>
-
+    <div class="sidebar">
+        <h2>YOU</h2>
+        <a href="#"><i class="fas fa-cogs"></i> Bot Setup</a>
+        <a href="#"><i class="fas fa-file-alt"></i> Logs</a>
+        <a href="#"><i class="fas fa-terminal"></i> Commands</a>
+        <h2>COMPANY</h2>
+        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+        <a href="#"><i class="fas fa-terminal"></i> Commands</a>
+        <a href="#"><i class="fas fa-chart-line"></i> Analytics</a>
+        <a href="#"><i class="fas fa-terminal"></i> Commands</a>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <div class="logo">BotDashboard</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for a user">
+            </div>
+            <div class="nav-links">
+                <a href="#">Commands</a>
+                <a href="#">Actions</a>
+                <a href="#">Alerts</a>
+                <a href="#">Controls</a>
+            </div>
+        </div>
+        <div class="dashboard">
+            <h1>Dashboard</h1>
+            <div class="stats">
+                <div class="stat">
+                    <h2>99.9%</h2>
+                    <p>+3% from last month</p>
+                    <p>Bot Status</p>
+                </div>
+                <div class="stat">
+                    <h2>2350</h2>
+                    <p>+3% from last month</p>
+                    <p>User Commands</p>
+                </div>
+                <div class="stat">
+                    <h2>485</h2>
+                    <p>+3% from last month</p>
+                    <p>Activity Logs</p>
+                </div>
+                <div class="stat">
+                    <h2>122</h2>
+                    <p>+3% from last month</p>
+                    <p>Bot Commands</p>
+                </div>
+            </div>
+            <div class="graphs">
+                <h2>Graphs</h2>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for a metric">
+                </div>
+                <div class="chart">
+                    <p>[Insert chart data]</p>
+                </div>
+                <div class="chart">
+                    <p>[Insert chart data]</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
