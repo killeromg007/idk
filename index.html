@@ -1,103 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <style>
-        /* Global Styles */
-        body {
-            min-height: 100vh;
-            margin: 0;
-            overflow-y: auto;
-            font-family: Arial, sans-serif; /* Specify your preferred font */
-            background-color: #f0f0f0; /* Add a light gray background */
+<html>
+ <head>
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            background-color: #87CEEB;
+            color: #333;
+            font-family: Arial, sans-serif;
         }
-
-        /* CSS for the big text with animation */
-        .big-text {
-            text-align: center;
-            font-size: 3em; /* Adjust the font size as needed */
-            margin-top: 100px;
-            animation: fadeIn ease 2s; /* Animation name, timing function, duration */
-            color: #333; /* Add a dark gray color to the text */
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+        .navbar {
+            background-color: #87CEEB;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; } /* Start from invisible */
-            to { opacity: 1; } /* Animate to fully visible */
+        .navbar-brand {
+            font-weight: bold;
+            color: #333;
         }
-
-        /* Navigation Bar Styles */
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+        .navbar-nav .nav-link {
+            color: #333;
         }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            display: block;
+        .btn-custom {
+            background-color: #007bff;
             color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            transition: background-color 0.2s ease; /* Add a transition effect */
+            border-radius: 5px;
         }
-
-        li a:hover {
-            background-color: #111;
+        .btn-custom-login {
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
         }
-
-        /* Image Styles */
-        img {
-            width: 100%;
-            height: 300px; /* Set a fixed height for the image */
-            object-fit: cover; /* Scale the image to cover the container */
-            margin: 20px 0;
-            border-radius: 10px; /* Add a subtle border radius */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
-        }
-
-        /* Content Styles */
         .content {
-            padding: 20px;
-            background-color: #fff; /* Add a white background to the content */
-            border-radius: 10px; /* Add a subtle border radius */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+            text-align: left;
+            padding: 100px;
         }
-
-        .content h2 {
-            margin-top: 0; /* Remove the default margin */
+        .content h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
         }
-    </style>
-</head>
-<body>
-
-<ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
-</ul>
-
-<div class="big-text">
-    Welcome to My Website
-</div>
-
-<img src="path_to_your_image.jpg" alt="Description of your image">
-
-<div class="content">
-    <h2>Content Here</h2>
-    <p>This is where your website content will go.</p>
-</div>
-
-</body>
+        .content p {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+  </style>
+ </head>
+ <body>
+  <nav class="navbar navbar-expand-lg">
+   <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+     TALKING_CAT
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Home
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Contect
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        About
+       </a>
+      </li>
+     </ul>
+     <a class="btn btn-custom me-2" href="https://killeromg007.github.io/popcattttttttttttttttt/cmd" target="_blank">
+      CMD
+     </a>
+     <a class="btn btn-custom-login" href="https://killeromg007.github.io/popcattttttttttttttttt/login" target="_blank">
+      🔒login
+     </a>
+    </div>
+   </div>
+  </nav>
+  <div class="content">
+   <h1>
+    I am a developer
+   </h1>
+   <p>
+    My name is Talking cat
+    <br/>
+    to know more about me scrools down
+   </p>
+   <div class="social-icons">
+    <img alt="Instagram logo" height="100" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-86dsXjb8XCm5ZrCXyhrmgX0k.png?st=2024-09-10T10%3A15%3A44Z&amp;se=2024-09-10T12%3A15%3A44Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-09T23%3A11%3A57Z&amp;ske=2024-09-10T23%3A11%3A57Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=JhjvitX8amwts5xkAstF3W%2BRg0FnICiNt2xNAD73olI%3D" width="100"/>
+    <img alt="GitHub logo" height="100" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-LYrgei5c4YWnzW4eNw7PXBkf.png?st=2024-09-10T10%3A11%3A08Z&amp;se=2024-09-10T12%3A11%3A08Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-09T22%3A51%3A37Z&amp;ske=2024-09-10T22%3A51%3A37Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=x1y7HO9LI9b87EUs5YF05vAiIO1wrBgwHGySmfQsCu0%3D" width="100"/>
+   </div>
+  </div>
+ </body>
 </html>
